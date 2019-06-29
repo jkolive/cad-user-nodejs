@@ -8,8 +8,7 @@ router.post('/register', async (req, res) => {
         const user = await User.create(req.body);
         return res.send({ user });
     } catch (err) {
-        return res.status(400).send({ error: 'Falha ao registrar' });
- 
+        return res.status(400).send("error: " + err);
     }
 });
 
